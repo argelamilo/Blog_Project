@@ -1,44 +1,139 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+﻿
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+
+    <title>Stand CSS Blog by TemplateMo</title>
+
+    <!-- Bootstrap core CSS -->
+    @*<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">*@
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <!-- Additional CSS Files -->
+    @*<link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/templatemo-stand-blog.css">
+        <link rel="stylesheet" href="assets/css/owl.css">*@
+    <link href="~/Content/assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/templatemo-stand-blog.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/owl.css" rel="stylesheet" />
+
+    @*TemplateMo 551 Stand Blog
+
+    https://templatemo.com/tm-551-stand-blog
+
+    -->*@
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href=@Url.Action("Index","Home")><h2>Travel Blog<em>.</em></h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("Index","Home")>
+                                Home
+                                @*<span class="sr-only">(current)</span>*@
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("About","Home")>About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("BlogEntries","Blog")>Blog Entries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("PostDetails","Blog")>Post Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href=@Url.Action("Contact","Home")>Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        @RenderBody() 
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <footer>
+        <div class="container">
+            @*<div class="row">
+                <div class="col-lg-12">
+                    <ul class="social-icons">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Behance</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                        <li><a href="#">Dribbble</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        <p>
+                            Copyright 2020 Stand Blog Co.
+
+                            | Design: <a rel="nofollow" href="https://templatemo.com" target="_parent">TemplateMo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!--<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+    <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <!--<script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>-->
+    <script src="~/Content/assets/js/custom.js"></script>
+    <script src="~/Content/assets/js/owl.js"></script>
+    <script src="~/Content/assets/js/slick.js"></script>
+    <script src="~/Content/assets/js/isotope.js"></script>
+    <script src="~/Content/assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
 </body>
 </html>
