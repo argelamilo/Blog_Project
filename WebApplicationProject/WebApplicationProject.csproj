@@ -208,7 +208,10 @@
     <Content Include="Content\assets\images\comment-author-02.jpg" />
     <Content Include="Content\assets\images\comment-author-03.jpg" />
     <Content Include="Content\assets\images\cta-bg.jpg" />
+    <Content Include="Content\assets\images\FullSizeRender.JPEG" />
     <Content Include="Content\assets\images\heading-bg.jpg" />
+    <Content Include="Content\assets\images\IMG_0890.JPEG" />
+    <Content Include="Content\assets\images\logo.png" />
     <Content Include="Content\assets\js\accordions.js" />
     <Content Include="Content\assets\js\custom.js" />
     <Content Include="Content\assets\js\isotope.js" />
